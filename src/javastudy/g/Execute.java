@@ -56,9 +56,11 @@ public class Execute {
         // Generic 클래스 범위 한정 예
         GCalc<Number> cal1 = new GCalc<Number>();
         GCalc<Integer> cal2 = new GCalc<Integer>(); // 하위 가능
-        GCalc<Double> cal3 = new GCalc<Double>(); // 하위 가능
 
-        // GCalc<Number> cal1 = new GCalc<Number>();
+        GCalc<Double> cal3 = new GCalc<Double>();   // 하위 가능
+        //<Number> 이하러 제한되어 있기에 에러가 뜨는 경우               
+//        GCalc<Object> cal4 = new GCalc<Object>();
+//        GCalc<String> cal5 = new GCalc<String>(); 
 
     }
 
