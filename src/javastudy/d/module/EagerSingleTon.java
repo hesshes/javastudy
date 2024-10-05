@@ -1,15 +1,16 @@
 package javastudy.d.module;
 
-public class EagerSingleTone {
+// 01 
+public class EagerSingleTon {
 
     // 싱글톤 클래스 객체를 담을 인스턴스 변수
-    private static final EagerSingleTone INSTANCE = new EagerSingleTone();
+    private static final EagerSingleTon INSTANCE = new EagerSingleTon();
 
     // 생성자를 private로 선언 (외부에서 new 사용 X)
-    private EagerSingleTone() {
+    private EagerSingleTon() {
     }
 
-    public static EagerSingleTone getInstance() {
+    public static EagerSingleTon getInstance() {
         return INSTANCE;
     }
 }

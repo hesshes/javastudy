@@ -1,9 +1,10 @@
 package javastudy.d.module;
 
-public class ThreadSafeSingleTone {
-    private static ThreadSafeSingleTone instance;
+//04
+public class ThreadSafeSingleTon {
+    private static ThreadSafeSingleTon instance;
 
-    private ThreadSafeSingleTone() {
+    private ThreadSafeSingleTon() {
     }
 
     // synchronized 메서드
@@ -14,9 +15,9 @@ public class ThreadSafeSingleTone {
      * 제한하고, thread-1이 완료가 되면 다음 스레드를 접근시킨다.
      * 
      */
-    public static synchronized ThreadSafeSingleTone getInstance() {
+    public static synchronized ThreadSafeSingleTon getInstance() {
         if (instance == null) {
-            instance = new ThreadSafeSingleTone();
+            instance = new ThreadSafeSingleTon();
         }
         return instance;
     }

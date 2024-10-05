@@ -1,17 +1,18 @@
 package javastudy.d.module;
 
-public class LayHolderSingleTone {
+//06
+public class LayHolderSingleTon {
 
-    private LayHolderSingleTone() {
+    private LayHolderSingleTon() {
     }
 
     // static 내부 클래스를 이용
     // Holder로 만들어, 클래스가 메모리에 로드되지 않고 getInstance 메서드가 호출되어야 로드됨
     private static class LayHolderSingleToneHolder {
-        private static final LayHolderSingleTone INSTANCE = new LayHolderSingleTone();
+        private static final LayHolderSingleTon INSTANCE = new LayHolderSingleTon();
     }
 
-    public static LayHolderSingleTone getInstance() {
+    public static LayHolderSingleTon getInstance() {
         return LayHolderSingleToneHolder.INSTANCE;
     }
 }
