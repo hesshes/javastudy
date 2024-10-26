@@ -3,12 +3,12 @@ package javastudy.d;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import javastudy.d.module.LazySingleTone;
+import javastudy.d.module.LazySingleTon;
 
 public class Execute {
     public static void main(String[] args) {
         // 1. ½Ì±ÛÅæ °´Ã¼¸¦ ´ãÀ» ¹è¿­
-        LazySingleTone[] singleton = new LazySingleTone[10];
+        LazySingleTon[] singleton = new LazySingleTon[10];
 
         // 2. ½º·¹µå Ç® »ý¼º
         ExecutorService service = Executors.newCachedThreadPool();
@@ -17,7 +17,7 @@ public class Execute {
         for (int i = 0; i < 10; i++) {
             final int num = i;
             service.submit(() -> {
-                singleton[num] = LazySingleTone.getInstance();
+                singleton[num] = LazySingleTon.getInstance();
             });
         }
 
@@ -25,7 +25,7 @@ public class Execute {
         service.shutdown();
 
         // 5. ½Ì±ÛÅæ °´Ã¼ ÁÖ¼Ò Ãâ·Â
-        for (LazySingleTone s : singleton) {
+        for (LazySingleTon s : singleton) {
             System.out.println(s.toString());
         }
     }

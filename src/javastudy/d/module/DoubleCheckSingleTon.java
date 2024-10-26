@@ -1,17 +1,18 @@
 package javastudy.d.module;
 
-public class DoubleCheckSingleTone {
-    private static volatile DoubleCheckSingleTone instance; // volatile 키워드 적용
+//05
+public class DoubleCheckSingleTon {
+    private static volatile DoubleCheckSingleTon instance; // volatile 키워드 적용
 
-    private DoubleCheckSingleTone() {
+    private DoubleCheckSingleTon() {
     }
 
-    public static DoubleCheckSingleTone getInstance() {
+    public static DoubleCheckSingleTon getInstance() {
         if (instance == null) {
             // 메서드에 동기화 거는게 아닌, Singleton 클래스 자체를 동기화 걸어버림
-            synchronized (DoubleCheckSingleTone.class) {
+            synchronized (DoubleCheckSingleTon.class) {
                 if (instance == null) {
-                    instance = new DoubleCheckSingleTone(); // 최초 초기화만 동기화 작업이 일어나서 리소스 낭비를 최소화
+                    instance = new DoubleCheckSingleTon(); // 최초 초기화만 동기화 작업이 일어나서 리소스 낭비를 최소화
                 }
             }
         }

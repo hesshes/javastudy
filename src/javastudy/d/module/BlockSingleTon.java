@@ -1,24 +1,24 @@
 package javastudy.d.module;
-
-public class BlockSingleTone {
+//02
+public class BlockSingleTon {
     // 싱글톤 클래스 객체를 담을 인스턴스 변수
-    private static BlockSingleTone instance;
+    private static BlockSingleTon instance;
 
     // 생성자를 private로 선언 (외부에서 new 사용 X)
-    private BlockSingleTone() {
+    private BlockSingleTon() {
     }
 
     // static 블록을 이용해 예외 처리
     // static block : 클래스가 로딩되고 클래스 변수가 준비된 후 자동으로 실행되는 블록
     static {
         try {
-            instance = new BlockSingleTone();
+            instance = new BlockSingleTon();
         } catch (Exception e) {
             throw new RuntimeException("싱글톤 객체 생성 오류");
         }
     }
 
-    public static BlockSingleTone getInstance() {
+    public static BlockSingleTon getInstance() {
         return instance;
     }
 }

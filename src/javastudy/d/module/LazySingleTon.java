@@ -1,17 +1,18 @@
 package javastudy.d.module;
 
-public class LazySingleTone {
+//03
+public class LazySingleTon {
     // 싱글톤 클래스 객체를 담을 인스턴스 변수
-    private static LazySingleTone instance;
+    private static LazySingleTon instance;
 
     // 생성자를 private로 선언 (외부에서 new 사용 X)
-    private LazySingleTone() {
+    private LazySingleTon() {
     }
 
     // 외부에서 정적 메서드를 호출하면 그제서야 초기화 진행 (lazy)
-    public static LazySingleTone getInstance() {
+    public static LazySingleTon getInstance() {
         if (instance == null) {
-            instance = new LazySingleTone(); // 오직 1개의 객체만 생성
+            instance = new LazySingleTon(); // 오직 1개의 객체만 생성
         }
         return instance;
     }
