@@ -10,7 +10,7 @@ import javastudy.e.module.EICompare;
 import javastudy.e.module.ESchool;
 import javastudy.e.module.EStudent;
 
-public class Eexecute {
+public class ExcuteExtend {
     public static void main(String[] args) {
         // Java Generic
         // 클래스 내부에서 사용할 데이터 타입을 외부에서 지정하는 기법
