@@ -1,9 +1,9 @@
-package javastudy.p.module;
+package javastudy.p.module.strategy;
 
 public class StrategyContext {
-    IStrategy strategy;
+    IStrategyPattern strategy;
 
-    public void setStrategy(IStrategy strategy) {
+    public void setStrategy(IStrategyPattern strategy) {
         this.strategy = strategy;
     }
     

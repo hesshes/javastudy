@@ -1,7 +1,7 @@
 package javastudy.p;
 
-import javastudy.p.module.PolymorphismChildren;
-import javastudy.p.module.PolymorphismParent;
+import javastudy.p.module.strategy.PolymorphismChildren;
+import javastudy.p.module.strategy.PolymorphismParent;
 
 public class Execute {
     public static void main(String[] args) {
@@ -10,7 +10,7 @@ public class Execute {
         tv.powerOn_Off();
         tv.channelOn_Off();
         
-        PolymorphismChildren tv = new PolymorphismParent(); // 컴파일 에러
+        //PolymorphismChildren tv = new PolymorphismParent(); // 컴파일 에러
         
         /*
          * 다형성 관련 문제

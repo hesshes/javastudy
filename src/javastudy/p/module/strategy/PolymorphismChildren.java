@@ -1,4 +1,4 @@
-package javastudy.p.module;
+package javastudy.p.module.strategy;
 
 public class PolymorphismChildren extends PolymorphismParent {
 

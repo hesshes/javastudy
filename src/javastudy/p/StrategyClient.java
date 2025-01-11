@@ -1,8 +1,8 @@
 package javastudy.p;
 
-import javastudy.p.module.StrategyConcreteA;
-import javastudy.p.module.StrategyConcreteB;
-import javastudy.p.module.StrategyContext;
+import javastudy.p.module.strategy.StrategyConcreteA;
+import javastudy.p.module.strategy.StrategyConcreteB;
+import javastudy.p.module.strategy.StrategyContext;
 
 public class StrategyClient {
     public static void main(String[] args) {

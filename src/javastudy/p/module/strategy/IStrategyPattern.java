@@ -1,7 +1,7 @@
-package javastudy.p.module;
+package javastudy.p.module.strategy;
 
 // 전략 패턴
-public interface IStrategy {
+public interface IStrategyPattern {
     public void doSomething();
 }
 
